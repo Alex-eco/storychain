@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>StoryChain MVP</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>StoryChain (MVP)</h1>
+    <div id="lobby">
+      <button id="newChainBtn">Create New Chain</button>
+    </div>
+
+    <div id="contribute" style="display:none">
+      <h3>Chain <span id="chainId"></span></h3>
+      <textarea id="contribText" placeholder="Write one short sentence..." maxlength="300"></textarea>
+      <br/>
+      <button id="submitContrib">Submit Contribution</button>
+      <div id="status"></div>
+      <pre id="paragraph" style="white-space:pre-wrap;"></pre>
+    </div>
+
+    <hr/>
+    <div id="donate">
+      <h3>Support with crypto</h3>
+      <p>Click Donate to send a small amount to the project's wallet via MetaMask.</p>
+      <button id="donateBtn">Donate 0.001 ETH</button>
+      <div id="donateStatus"></div>
+    </div>
+  </div>
+
+  <script>
+    // API base: change if backend served elsewhere
+    const API_BASE = ""; // empty string means same origin; if backend on another host, set like "https://your-backend.example"
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
