@@ -3,12 +3,12 @@ services:
     name: storychain-backend
     env: node
     rootDir: backend
-    buildCommand: npm install
+    buildCommand: yarn
     startCommand: npm start
     envVars:
       - key: OPENAI_API_KEY
         sync: false
-      - key: RECEIVER_ADDRESS
+      - key: 0x510D84Ccfd47fF2cD5dd86Dd34c601293a42cab3
         sync: false
       - key: PORT
         value: 3000
