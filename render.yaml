@@ -1,11 +1,10 @@
-        services:
+services:
   - type: web
     name: storychain-backend
     env: node
     plan: free
-    rootDir: backend
-    buildCommand: npm install
-    startCommand: node server.js
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && node server.js
     envVars:
       - key: RECEIVER_ADDRESS
         value: "0x510D84Ccfd47fF2cD5dd86Dd34c601293a42cab3"
