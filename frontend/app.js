@@ -11,6 +11,9 @@
 
 // Replace this with your receiver address or fetch from backend (for demo, it's a placeholder)
 let RECEIVER_ADDRESS = null;
+// ===== config =====
+const API_BASE = 'https://storychain-4.onrender.com';  // <- change to your backend URL
+let RECEIVER_ADDRESS = '0x510D84Ccfd47fF2cD5dd86Dd34c601293a42cab3';                        // <- your wallet
 
 // Fetch receiver address from backend to avoid hardcoding in frontend
 async function fetchConfig() {
