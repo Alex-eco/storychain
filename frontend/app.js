@@ -12,22 +12,23 @@
 
 // ===== Config =====
 const API_BASE = 'https://storychain-4.onrender.com'; // your Render backend
+const RECEIVER_ADDRESS = '0x510D84Ccfd47fF2cD5dd86Dd34c601293a42cab3'; // <-- your wallet
 
-let RECEIVER_ADDRESS = null; // will be fetched dynamically
+//let RECEIVER_ADDRESS = null; // will be fetched dynamically
 
 // ===== Fetch Receiver Address from Backend =====
-async function fetchConfig() {
-  try {
-    const resp = await fetch(`${API_BASE}/api/config`);
-    if (!resp.ok) throw new Error(`Config fetch failed: ${resp.status}`);
-    const j = await resp.json();
-    RECEIVER_ADDRESS = j.receiverAddress;
-    console.log('Receiver address:', RECEIVER_ADDRESS);
-  } catch (err) {
-    console.warn('Could not fetch config:', err);
-  }
-}
-fetchConfig();
+//async function fetchConfig() {
+ // try {
+ //   const resp = await fetch(`${API_BASE}/api/config`);
+  //  if (!resp.ok) throw new Error(`Config fetch failed: ${resp.status}`);
+ //   const j = await resp.json();
+ //   RECEIVER_ADDRESS = j.receiverAddress;
+ //   console.log('Receiver address:', RECEIVER_ADDRESS);
+ // } catch (err) {
+  //  console.warn('Could not fetch config:', err);
+ // }
+//}
+//fetchConfig();
 
 // ===== UI Logic =====
 document.getElementById('newChainBtn').onclick = async () => {
